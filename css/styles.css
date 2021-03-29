@@ -1,15 +1,25 @@
 section{
     padding: 1rem;
 }
+h3 {
+    color: #fff;
+    font-size: 4rem;
+}
 p{
     margin-bottom: 1.5rem;
 }
 .horizontal-content{
     display: flex;
     overflow: scroll;
-    scrollbar-width: none;
+    /* this hides the scrollbar in FF */
+    scrollbar-width: none; 
     height: 237.7px;
     align-items: center;
+}
+/* this hides the scroolbar in Chrome */
+.horizontal-content::-webkit-scrollbar{
+    background: transparent;
+    width: 0;
 }
 
 .horizontal-content > div{
@@ -24,5 +34,15 @@ p{
 .horizontal-content > div:active{
     flex: 0 0 346.5px;
     height: 205.7px;
+}
 
+.parallax-image{
+    background-image: url('../img/movie.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    padding:50px 20px;
+    background-attachment: fixed;
+    /* background attachment doesn't work on mobile due to perfomance */
 }
